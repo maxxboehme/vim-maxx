@@ -1,11 +1,7 @@
-if exists('g:loaded_maxxLightline') || &compatible
-   finish
-else
-   let g:loaded_maxxLightline = 1
-endif
-
 hi StatusLine gui=bold,reverse cterm=bold,reverse term=bold,reverse
 hi StatusLineNC gui=reverse cterm=reverse term=reverse
+
+set noshowmode
 
 if has('gui_running')
    set guifont=Inconsolata\ for\ Powerline:h11

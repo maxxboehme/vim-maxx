@@ -1,9 +1,3 @@
-if exists('g:loaded_maxxMappings') || &compatible
-   finish
-else
-   let g:loaded_maxxMappings = 1
-endif
-
 " Unmap the arrow keys
 no <down>  ddp
 no <up>    ddkP

@@ -4,13 +4,12 @@ syntax on
 "========== General Settings ==========
 set encoding=utf-8
 
-set tabstop=3
-set shiftwidth=3
 set expandtab
-
-set autoindent
-set backspace=indent,eol,start
+set shiftwidth=4
+set softtabstop=4
 set smarttab
+
+set backspace=indent,eol,start
 
 set nrformats-=octal
 set ttimeout
@@ -75,3 +74,24 @@ if has("persistent_undo")
    set undodir=$VIMHOME/undo
    set undofile
 endif
+
+
+"========== Indentation =========="
+function! CppNoTemplateIndent()
+    let l:cline_num = line('.')
+    let l:cline = getline(l:cline_num)
+    let l:pline_num = prevnonblank(l:cline_num - 1)
+    let l:pline = getline(l:pline_num)
+    while l:pline =~# '\(^\s*{\s*\|^\s*//\|^\s*/\*\|\*/\s*$\)'
+        let l:pline_num = prevnonblank(l:pline_num - 1)
+        let l:pline = getline(l:pline_num)
+    endwhile
+    let l:retv = cindent('.')
+    let l:pindent = indent(l:pline_num)
+    if l:pline =~# '^\s*template\s*<.\{-}>\s*$'
+        let l:retv = l:pindent
+    endif
+    return l:retv
+endfunc
+
+set indentexpr=CppNoTemplateIndent()

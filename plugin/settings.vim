@@ -97,5 +97,5 @@ set indentexpr=CppNoTemplateIndent()
 
 "========== Switch Headers =========="
 nmap <leader>aa :A<CR>
-nmap <leader>as :A<CR>
-nmap <leader>av :A<CR>
+nmap <leader>as :AS<CR>
+nmap <leader>av :AV<CR>

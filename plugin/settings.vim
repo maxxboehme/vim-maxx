@@ -35,12 +35,12 @@ set noerrorbells
 set novisualbell
 
 if has('gui_running')
-   set spell
-   set cursorline
-   set lines=60 columns=140
+    set spell
+    set cursorline
+    set lines=60 columns=140
 
-   set guioptions-=T "remove toolbar
-   set guioptions-=m "remove menu bar
+    set guioptions-=T "remove toolbar
+    set guioptions-=m "remove menu bar
 endif
 
 set nocompatible
@@ -49,14 +49,13 @@ set list listchars=tab:»·,trail:-,extends:>,precedes:<,eol:¬
 
 " ColorScheme
 if has('gui_running')
-   color phoenix
+    color phoenix
 else
-   color slate
+    color slate
 endif
 
 "========== Gutentags Settings =========="
 let g:gutentags_project_root = ['Makefile']
-
 
 "========== Undotree Settings =========="
 if has('win32') || has ('win64')
@@ -67,12 +66,12 @@ endif
 
 " Persistent undo
 if has("persistent_undo")
-   let undodir = expand("$VIMHOME/undo")
-   if !isdirectory(undodir)
-      call mkdir(undodir)
-   endif
-   set undodir=$VIMHOME/undo
-   set undofile
+    let undodir = expand("$VIMHOME/undo")
+    if !isdirectory(undodir)
+        call mkdir(undodir)
+    endif
+    set undodir=$VIMHOME/undo
+    set undofile
 endif
 
 
@@ -95,3 +94,8 @@ function! CppNoTemplateIndent()
 endfunc
 
 set indentexpr=CppNoTemplateIndent()
+
+"========== Switch Headers =========="
+nmap <leader>aa :A<CR>
+nmap <leader>as :A<CR>
+nmap <leader>av :A<CR>

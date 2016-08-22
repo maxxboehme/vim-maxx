@@ -55,7 +55,7 @@ else
 endif
 
 "========== Gutentags Settings =========="
-let g:gutentags_project_root = ['Makefile']
+let g:gutentags_project_root = ['Makefile', '.git', 'build']
 
 "========== Undotree Settings =========="
 if has('win32') || has ('win64')

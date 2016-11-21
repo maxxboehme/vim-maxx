@@ -7,7 +7,6 @@ elseif has('gui_running')
 endif
 
 if has('gui_running')
-    set guifont=Inconsolata\ for\ Powerline:h11
     let g:lightline = {
                 \ 'colorscheme': 'wombat',
                 \ 'active': {

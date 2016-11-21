@@ -1,5 +1,11 @@
 set noshowmode
 
+if has('gui_running') && has('win32')
+    set guifont=Inconsolata\ for\ Powerline:h11
+elseif has('gui_running')
+    set guifont=Inconsolata\ for\ Powerline\ Bold\ 11
+endif
+
 if has('gui_running')
     set guifont=Inconsolata\ for\ Powerline:h11
     let g:lightline = {

@@ -55,6 +55,7 @@ else
 endif
 
 "========== Gutentags Settings =========="
+let g:ctrlp_root_markers = ['Makefile', '.git', 'build', 'scrapy.cfg']
 let g:gutentags_project_root = ['Makefile', '.git', 'build', 'scrapy.cfg']
 
 "========== Undotree Settings =========="

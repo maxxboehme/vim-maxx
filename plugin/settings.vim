@@ -55,8 +55,8 @@ else
 endif
 
 "========== Gutentags Settings =========="
-let g:ctrlp_root_markers = ['Makefile', '.git', 'build', 'scrapy.cfg']
-let g:gutentags_project_root = ['Makefile', '.git', 'build', 'scrapy.cfg']
+let g:ctrlp_root_markers = ['Makefile', '.git', 'build', 'scrapy.cfg', 'package.mako', 'pyproject.toml', 'Cargo.toml', 'project-meta-info.cmake']
+let g:gutentags_project_root = ['Makefile', '.git', 'build', 'scrapy.cfg', 'package.mako', 'pyproject.toml', 'Cargo.toml', 'project-meta-info.cmake']
 
 "========== Undotree Settings =========="
 if has('win32') || has ('win64')
